@@ -7,13 +7,7 @@ import { initializeAppCheck, ReCaptchaV3Provider } from "firebase/app-check";
 
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDztCVILgSdDDe5mZnI3WYjRCpZ6YofRw8',
-  authDomain: "textti-38fbc.firebaseapp.com",
-  projectId: "textti-38fbc",
-  storageBucket: "textti-38fbc.appspot.com",
-  messagingSenderId: "191583632362",
-  appId: "1:191583632362:web:fef871ce295ddca6395093",
-  measurementId: "G-HJ3H6LFQWV"
+ 
 };
 
 const app = initializeApp(firebaseConfig);
