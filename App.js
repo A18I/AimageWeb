@@ -1,6 +1,6 @@
 import React from 'react';
 import { AuthProvider } from './AuthContext';
-import Navigation from './Navigation'; // Replace with your navigation component
+import Navigation from './Navigation'; 
 
 const App = () => {
   return (
