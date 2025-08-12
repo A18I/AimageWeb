@@ -25,7 +25,6 @@ const MainPage = ({ route }) => {
     }
   }, [username]);
 
-  // Check if the user is logged in and display their username
   useEffect(() => {
     if (currentUser) {
       console.log("User is logged in as:", currentUser.displayName);
@@ -131,13 +130,12 @@ const MainPage = ({ route }) => {
         
         let aspectRatio = 'default';
       if (resolution === "1024x1024") {
-        aspectRatio = '1:1';  // Square aspect ratio
+        aspectRatio = '1:1'; 
       } else if (resolution === "1024x1792") {
-        aspectRatio = '9:16';  // Tall aspect ratio
+        aspectRatio = '9:16'; 
       }
         
 
-        // Save the image and story details to the database with image upload
         const image = {
           user_id: user.uid,
           username: username,
@@ -181,9 +179,9 @@ const MainPage = ({ route }) => {
     setOptionsVisible(!optionsVisible);
   };
   
-  const switchSize = 40; // Define the size of the switch thumb
-  const switchTrackColor = { false: "white", true: "#c4024b" }; // Define the track color
-  const switchThumbColor = { false: "grey", true: "#ff0000" }; // Define the thumb color
+  const switchSize = 40; 
+  const switchTrackColor = { false: "white", true: "#c4024b" }; 
+  const switchThumbColor = { false: "grey", true: "#ff0000" }; 
   const switchIOSBackgroundColor = "fff";
 
 
@@ -218,7 +216,7 @@ const MainPage = ({ route }) => {
       >
         <TouchableOpacity
           style={{ flex: 1 }}
-          onPress={() => setOptionsVisible(false)} // Close the modal when clicked away
+          onPress={() => setOptionsVisible(false)} 
         >
           <View style={styles.centeredView}>
             <View style={styles.modalView}>
@@ -232,7 +230,7 @@ const MainPage = ({ route }) => {
                       value={model === "dall-e-3"}
                       onValueChange={() => setModel("dall-e-3")}
                       trackColor={switchTrackColor}
-                      thumbColor={switchThumbColor[model === "dall-e-3"]} // Change thumb color based on switch state
+                      thumbColor={switchThumbColor[model === "dall-e-3"]} 
                       ios_backgroundColor={switchIOSBackgroundColor}
                     />
                   </View>
@@ -395,7 +393,7 @@ const MainPage = ({ route }) => {
           style={[
             styles.button,
             { backgroundColor: "#c4024b", opacity: loading ? 0.5 : 1 },
-          ]} // Apply the button style here
+          ]} 
         >
           <Text style={styles.buttonText}>Generate</Text>
         </TouchableHighlight>
@@ -403,7 +401,7 @@ const MainPage = ({ route }) => {
 
       {/* Input Box */}
       <TextInput
-        style={[styles.input]} // Set a minimum height
+        style={[styles.input]} 
         multiline={true}
         value={text}
         onChangeText={setText}
@@ -513,7 +511,7 @@ const styles = StyleSheet.create({
   },
   generateContainer: {
     position: 'relative',
-    top: 20,  // Position it 10% from the top of its parent container
+    top: 20,  // 
     left: '25%',
     right: 0,
     bottom: '500%',
@@ -663,4 +661,5 @@ const styles = StyleSheet.create({
     height: '200%',
   },
 });
+
 export default MainPage;
