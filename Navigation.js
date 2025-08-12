@@ -45,7 +45,7 @@ const Navigation = () => {
                  <TouchableHighlight
                 onPress={() => toggleModal()}
                underlayColor="#c4024b" 
-              style={{ backgroundColor: '#c4024b', borderRadius: 3, paddingHorizontal: 'auto', paddingVertical: 6, padding:13,  }} // Example style, adjust as needed
+              style={{ backgroundColor: '#c4024b', borderRadius: 3, paddingHorizontal: 'auto', paddingVertical: 6, padding:13,  }} //
               >
              <Text style={{ color: '#fff', textAlign: 'center', fontSize:18, }}>
              {currentUser && typeof currentUser.displayName === 'string' ? currentUser.displayName : 'Profile'}
@@ -57,7 +57,7 @@ const Navigation = () => {
                navigation.navigate('Log');
                }}
                 underlayColor="#c4024b" 
-                 style={{ backgroundColor: '#c4024b', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 10 }} // Example style, adjust as needed
+                 style={{ backgroundColor: '#c4024b', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 10 }} //
                >
                   <Text style={{ color: '#fff', textAlign: 'center' }}>Login/Register</Text>
        </TouchableHighlight>
@@ -133,7 +133,7 @@ const Navigation = () => {
                 toggleModal();
                 }}
                underlayColor="#c4024b" 
-              style={{ marginBottom: 10, backgroundColor: '#c4024b', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 10 }} // Example style, adjust as needed
+              style={{ marginBottom: 10, backgroundColor: '#c4024b', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 10 }} 
               >
             <Text style={{ color: '#fff', textAlign: 'center' }}>My Images</Text>
              </TouchableHighlight>
@@ -215,3 +215,4 @@ const styles = StyleSheet.create({
 });
 
 export default Navigation;
+
